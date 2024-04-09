@@ -9,7 +9,10 @@ public class TicTacToe extends Application {
     @Override
     public void start(Stage primaryStage) {
         primaryStage.show();
-    }
+
+        ImageView image = new ImageView("exercice2/Croix.png");
+        label.setGraphic(image);
+
 
         GridPane.setConstraints(0, 0);
         GridPane.setConstraints(1, 0);
@@ -20,6 +23,6 @@ public class TicTacToe extends Application {
         GridPane.setConstraints(0, 2);
         GridPane.setConstraints(1, 2);
         GridPane.setConstraints(2, 2);
-
+    }
 }
 
