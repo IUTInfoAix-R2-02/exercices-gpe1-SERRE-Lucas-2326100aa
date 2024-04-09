@@ -1,7 +1,6 @@
 package fr.amu.iut.exercice2;
 
 import javafx.application.Application;
-import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 public class TicTacToe extends Application {
@@ -10,7 +9,7 @@ public class TicTacToe extends Application {
     public void start(Stage primaryStage) {
         primaryStage.show();
 
-        ImageView image = new ImageView("exercice2/Croix.png");
+/*        ImageView image = new ImageView("exercice2/Croix.png");
         label.setGraphic(image);
 
 
@@ -22,7 +21,7 @@ public class TicTacToe extends Application {
         GridPane.setConstraints(2, 1);
         GridPane.setConstraints(0, 2);
         GridPane.setConstraints(1, 2);
-        GridPane.setConstraints(2, 2);
+        GridPane.setConstraints(2, 2);*/
     }
 }
 
