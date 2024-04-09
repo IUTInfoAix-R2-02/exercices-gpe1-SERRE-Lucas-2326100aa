@@ -1,6 +1,7 @@
 package fr.amu.iut.exercice2;
 
 import javafx.application.Application;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 public class TicTacToe extends Application {
@@ -9,5 +10,16 @@ public class TicTacToe extends Application {
     public void start(Stage primaryStage) {
         primaryStage.show();
     }
+
+        GridPane.setConstraints(0, 0);
+        GridPane.setConstraints(1, 0);
+        GridPane.setConstraints(2, 0);
+        GridPane.setConstraints(0, 1);
+        GridPane.setConstraints(1, 1);
+        GridPane.setConstraints(2, 1);
+        GridPane.setConstraints(0, 2);
+        GridPane.setConstraints(1, 2);
+        GridPane.setConstraints(2, 2);
+
 }
 
