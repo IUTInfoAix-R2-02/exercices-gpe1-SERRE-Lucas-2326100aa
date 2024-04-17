@@ -7,6 +7,9 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class JeuMain extends Application {
 
     private Scene scene;
@@ -20,6 +23,12 @@ public class JeuMain extends Application {
         //Acteurs du jeu
         Personnage pacman = new Pacman();
         Personnage fantome = new Fantome();
+        //obstacles
+        List<Obstacles> obs = new ArrayList<>();
+        Obstacles obs1 = new Obstacles(50, 90, 40, 40);
+        Obstacles obs2 = new Obstacles(300, 250, 80, 80);
+        Obstacles obs3 = new Obstacles(330, 100, 100, 20);
+
         // on positionne le fantôme 20 positions vers la droite
         fantome.setLayoutX(20 * 10);
         //panneau du jeu
@@ -27,6 +36,7 @@ public class JeuMain extends Application {
         jeu.setPrefSize(640, 480);
         jeu.getChildren().add(pacman);
         jeu.getChildren().add(fantome);
+        jeu.getChildren().addAll(obs1, obs2, obs3);
         root.setCenter(jeu);
         //on construit une scene 640 * 480 pixels
         scene = new Scene(root);
@@ -62,13 +72,25 @@ public class JeuMain extends Application {
                 case DOWN:
                     j1.deplacerEnBas(scene.getHeight());
                     break;
+                case Q:
+                    j2.deplacerAGauche();
+                    break;
+                case D:
+                    j2.deplacerADroite(scene.getWidth());
+                    break;
                 case Z:
-                    //j2...... vers le haut;
+                    j2.deplacerEnHaut();
+                    break;
+                case S:
+                    j2.deplacerEnBas(scene.getHeight());
                     break;
 
             }
-            if (j1.estEnCollision(j2))
+            if (j1.estEnCollision(j2)) {
                 System.out.println("Collision....");
+                System.exit(0);
+            }
+
         });
     }
 
