@@ -62,27 +62,43 @@ public class JeuMain extends Application {
             switch (event.getCode()) {
                 case LEFT:
                     j1.deplacerAGauche();
+                    j1.getLayoutX();
+                    j1.getLayoutY();
                     break;
                 case RIGHT:
                     j1.deplacerADroite(scene.getWidth());
+                    j1.getLayoutX();
+                    j1.getLayoutY();
                     break;
                 case UP:
                     j1.deplacerEnHaut();
+                    j1.getLayoutX();
+                    j1.getLayoutY();
                     break;
                 case DOWN:
                     j1.deplacerEnBas(scene.getHeight());
+                    j1.getLayoutX();
+                    j1.getLayoutY();
                     break;
                 case Q:
                     j2.deplacerAGauche();
+                    j2.getLayoutX();
+                    j2.getLayoutY();
                     break;
                 case D:
                     j2.deplacerADroite(scene.getWidth());
+                    j2.getLayoutX();
+                    j2.getLayoutY();
                     break;
                 case Z:
                     j2.deplacerEnHaut();
+                    j2.getLayoutX();
+                    j2.getLayoutY();
                     break;
                 case S:
                     j2.deplacerEnBas(scene.getHeight());
+                    j2.getLayoutX();
+                    j2.getLayoutY();
                     break;
 
             }

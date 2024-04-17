@@ -46,6 +46,7 @@ public class Palette extends Application {
         Pane pn = new Pane();
         bdp.setCenter(pn);
 
+
         //label affichage de la phrase d'entete + compte
         HBox hbxLbl = new HBox();
         bdp.setTop(hbxLbl);
