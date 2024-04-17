@@ -24,6 +24,8 @@ public class IHMPendu extends Application {
         VBox vbx1 = new VBox();
         vbx1.setAlignment(Pos.CENTER);
 
+        //deviner le mot
+        Dico dico = new Dico();
         //textfield
         TextField fieldName = new TextField("veuillez saisir une lettre");
         fieldName.setMaxWidth(180.0d);
