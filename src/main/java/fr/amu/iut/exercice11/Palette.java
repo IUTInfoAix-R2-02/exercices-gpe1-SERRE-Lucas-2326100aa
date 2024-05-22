@@ -1,6 +1,8 @@
 package fr.amu.iut.exercice1;
 
 import javafx.application.Application;
+import javafx.beans.property.IntegerProperty;
+import javafx.event.ActionEvent;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -22,6 +24,8 @@ public class Palette extends Application {
     private int nbBleu = 0;
 
     private Label texteDuHaut;
+
+    private IntegerProperty = nbFois SimpleIntegerProperty
 
     private Button vert;
     private Button rouge;
@@ -58,6 +62,26 @@ public class Palette extends Application {
         bleu = new Button("Bleu");
 
         /* VOTRE CODE ICI */
+
+        root.setCenter(panneau);
+
+        vert.setOnAction(ActionEvent -> {
+            texteDuHaut.setText("vert choisi "+nbVert+" fois");
+            nbVert++;
+            panneau.setStyle("-fx-background-color: green");
+        });
+
+        rouge.setOnAction(ActionEvent -> {
+            texteDuHaut.setText("rouge choisi "+nbRouge+" fois");
+            nbRouge++;
+            panneau.setStyle("-fx-background-color: red");
+        });
+
+        bleu.setOnAction(ActionEvent -> {
+            texteDuHaut.setText("vert choisi "+nbBleu+" fois");
+            nbBleu++;
+            panneau.setStyle("-fx-background-color: blue");
+        });
 
         boutons.getChildren().addAll(vert, rouge, bleu);
 
